@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flows>
+<Flow>	
+	<TriggerName>Account_Created</TriggerName>
+	<Description>AccountCreateWithParameter001</Description>
+	<DescriptionTermID>0</DescriptionTermID>	
+	<Expression></Expression>
+	<Notes></Notes>	
+	<Actions>
+		<Action>
+			<ActionName>Generic_CreateTask</ActionName>
+			<SequenceNumber>1</SequenceNumber>
+			<EnabledExpression></EnabledExpression>
+			<CanContinueExpression></CanContinueExpression>
+			<ReturnValueName></ReturnValueName>
+			<Parameters>
+				<Parameter>
+					<Name>UserID</Name>
+					<ValueExpression>AccountManager</ValueExpression>					
+					<LiteralValue></LiteralValue>
+				</Parameter>
+				</Parameters>
+			</Action>
+			<Action>
+			<ActionName>Generic_DeleteSubscriptionLine</ActionName>
+			<SequenceNumber>1</SequenceNumber>
+			<EnabledExpression></EnabledExpression>
+			<CanContinueExpression></CanContinueExpression>
+			<ReturnValueName></ReturnValueName>
+			<Parameters>
+				<Parameter>
+					<Name>ID</Name>
+					<ValueExpression>Email</ValueExpression>					
+					<LiteralValue></LiteralValue>
+				</Parameter>
+			</Parameters>				
+		</Action>
+	</Actions>
+</Flow>
+</Flows>
